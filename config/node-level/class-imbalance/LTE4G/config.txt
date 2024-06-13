@@ -1,0 +1,15 @@
+{
+            "n_layer": 2,
+            "feat_dim": 64,
+            "dropout": 0.5,
+            "weight_decay": 0.0005,
+            "epoch": 500,
+            "lr": 0.01,
+            "tau": 1,
+            "nfeat": 745,
+            "nhid": 64,
+            "nclass": 8,
+            "class_weight": true,
+            "criterion": "mean",
+            "gamma": 1
+        }

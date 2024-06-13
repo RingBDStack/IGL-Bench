@@ -1,0 +1,14 @@
+!!python/object:argparse.Namespace
+backbone: Gcn
+dataset: Actor
+epoch: 500
+gpu: 1
+hid_dim: 128
+loss_hp: 1
+lr: 0.01
+num_layers: 2
+run_times: 10
+shuffle_seed: 40
+split: 0
+stop_step: 50
+weight_decay: 0.0005

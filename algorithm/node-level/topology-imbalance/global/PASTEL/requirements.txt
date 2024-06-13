@@ -1,0 +1,9 @@
+dgl==0.8.0.post1
+dgl_cu111==0.7.2
+networkx==2.6.3
+numpy==1.20.3
+PyYAML==6.0
+scikit_learn==1.1.1
+scipy==1.7.1
+torch==1.9.1+cu111
+torch_geometric==2.0.1

@@ -1,0 +1,20 @@
+!!python/object:argparse.Namespace
+backbone: gin
+batch_size: 128
+beta: 0.3
+dataset: DD
+epochs: 500
+feature_dim: 10
+graph_pooling_type: average
+hidden_dim: 96
+hidden_graphs: 6
+imb: 0.9
+lr: 0.001
+max_step: 4
+n_split: 2
+nclass: 2
+normalize: true
+num_layers: 2
+penultimate_dim: 32
+seed: 10
+size_hidden_graphs: 4

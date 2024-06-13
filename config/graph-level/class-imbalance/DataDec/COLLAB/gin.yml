@@ -1,0 +1,13 @@
+bb: gin
+biggest_prune_percent: 0.75
+data_prune_rate: 0.5
+dataset: COLLAB
+explore_rate: 0.1
+imb_ratio: 100.0
+is_error_rank: false
+num_epochs: 500
+num_training: 120
+num_val: 120
+prune_percent: 0.25
+random_prune_percent: 0.25
+seed: 10

@@ -1,0 +1,42 @@
+!!python/object:argparse.Namespace
+data_name: photo
+data_path: ./dataset/photo
+dropout: 0.5
+early_stop: 20
+epoch: 300
+factor_cb: 0.9999
+factor_focal: 2.0
+gpu: 0
+head_list:
+- 0
+- 1
+- 2
+imb_ratio: 1.0
+labeling_ratio: 0.01
+least_epoch: 40
+log_path: log.txt
+loss_name: ce
+lr: 0.01
+lr_decay_epoch: 20
+lr_decay_rate: 0.95
+model: gcn
+num_class: 7
+num_feature: 745
+num_hidden: 256
+num_layer: 2
+pagerank_prob: 0.85
+ppr_file: ./dataset/photo/photo_ppr.pt
+ppr_topk: -1
+renode_reweight: 1
+rn_base_weight: 0.5
+rn_scale_weight: 1.0
+run_init_num: 1
+run_split_num: 10
+saved_model: best-model.pt
+seed_list:
+- 0
+shuffle_seed: 1
+size_imb_type: none
+train_each: 20
+valid_each: 30
+weight_decay: 0

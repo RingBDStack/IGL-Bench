@@ -1,0 +1,17 @@
+{
+            "n_layer": 2,
+            "feat_dim": 64,
+            "dropout": 0.5,
+            "weight_decay": 0.0005,
+            "epoch": 500,
+            "lr": 0.01,
+            "warmup": 5,
+            "keep_prob": 0.01,
+            "tau": 2,
+            "tam_alpha": 2.5,
+            "tam_beta": 0.5,
+            "temp_phi": 1.2,
+            "max": false,
+            "no_mask": false,
+            "gdc": "ppr"
+        }
