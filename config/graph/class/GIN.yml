@@ -1,0 +1,9 @@
+algorithm: 'GIN'
+task: 'graph'
+n_layer: 3
+lr: 0.005
+hidden_dim: 256
+dropout: 0.5
+weight_decay: 0.000
+epoch: 500
+use_batch_norm: true

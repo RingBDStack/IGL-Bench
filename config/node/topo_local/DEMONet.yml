@@ -1,0 +1,13 @@
+algorithm: 'DEMONet'
+task: 'node'
+n_layer: 2
+lr: 0.005
+hidden_dim: 64
+dropout: 0.1
+weight_decay: 0.0005
+epoch: 1000
+least_epoch: 40
+patience: 100
+hash_dim: 256
+n_hash_kernel: 1
+n_layers: 2

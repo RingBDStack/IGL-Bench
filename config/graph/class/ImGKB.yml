@@ -1,0 +1,15 @@
+algorithm: 'ImGKB'
+task: 'graph'
+n_layer: 3
+backbone: 'GIN'
+batch_size: 128
+lr: 0.005
+hidden_dim: 96
+dropout: 0.5
+weight_decay: 0.0005
+epoch: 500
+
+hidden_graphs: 6
+size_hidden_graphs: 4
+max_step: 1
+beta: 0.3

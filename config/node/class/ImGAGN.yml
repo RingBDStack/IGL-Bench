@@ -1,0 +1,10 @@
+algorithm: 'ImGAGN'
+task: 'node'
+
+ratio_generated: 1.0
+hidden: 128
+dropout: 0.5
+epochs_gen: 10
+lr: 0.01
+weight_decay: 0.0005
+epochs: 100

@@ -1,0 +1,10 @@
+algorithm: 'GIN'
+task: 'graph'
+n_layer: 3
+lr: 0.01
+hidden_dim: 32
+dropout: 0.5
+weight_decay: 0.0005
+epoch: 500
+use_batch_norm: true
+batch_size: 32

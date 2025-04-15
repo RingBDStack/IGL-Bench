@@ -1,0 +1,23 @@
+algorithm: 'TopoImb'
+task: 'graph'
+backbone: 'GIN'
+n_layer: 3
+lr: 0.002
+hidden_dim: 128
+dropout: 0.5
+weight_decay: 0.0005
+epoch: 500
+batch_size: 128
+use_key: False
+att: 'dp'
+reweight_weight: 0.2
+reweight_lr: 0.005
+adv_step: 1
+shared_encoder: False
+re_task: 'wlcls'
+n_mem:
+- 8
+- 8
+- 8
+- 8
+- 8

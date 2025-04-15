@@ -1,0 +1,9 @@
+algorithm: 'GCN'
+task: 'node'
+n_layer: 2
+lr: 0.01
+hidden_dim: 128
+dropout: 0.5
+weight_decay: 0.0005
+epoch: 500
+least_epoch: 40

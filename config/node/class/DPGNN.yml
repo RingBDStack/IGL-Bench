@@ -1,0 +1,12 @@
+algorithm: 'DPGNN'
+task: 'node'
+backbone: 'GCN'
+n_hidden: 256
+epochs: 3000
+
+episodic_samp: 1
+eta: 3
+ssl: 'yes'
+label_prop: 'yes'
+lamb1: 10
+lamb2: 20

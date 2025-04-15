@@ -1,0 +1,19 @@
+algorithm: 'TOPOAUC'
+task: 'node'
+backbone: 'GCN'
+n_layer: 2
+lr: 0.005
+hidden_dim: 128
+dropout: 0.5
+weight_decay: 0
+epoch: 500
+least_epoch: 40
+
+loss: 'ExpGAUC'
+weight_global_dim: 64
+weight_inter_dim: 64
+weight_sub_dim: 64
+topo_dim: 64
+pagerank_prob: 0.15
+beta: 0.5
+gamma: 0.5

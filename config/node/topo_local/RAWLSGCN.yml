@@ -1,0 +1,12 @@
+algorithm: 'RAWLSGCN'
+task: 'node'
+n_layer: 2
+lr: 0.05
+hidden_dim: 64
+dropout: 0.5
+weight_decay: 0.0005
+epoch: 100
+least_epoch: 40
+patience: 100
+model: 'rawlsgcn_graph'
+loss: 'negative_log_likelihood'

@@ -1,0 +1,33 @@
+algorithm: 'GRAPHPATCHER'
+task: 'node'
+pretrain:
+  hid_dim: [64]
+  lr: 1e-3
+  weight_decay: 5e-4
+  norm: 'identity'
+  mp_norm: 'right'
+generator:
+  target_gnn: ''
+  backbone: 'gcn'
+  hid_dim: [ 1024 ]
+  warmup_steps: 100
+  lr: 1e-4
+  device: 0
+  weight_decay: 5e-4
+  degree_train: 1
+  drop_ratio: [ ]
+  three_layer: False
+  k: 3
+  generation_iteration: -1
+  total_generation_iteration: 5
+  norm: 'identity'
+  training_iteration: 10000
+  dropout: 0.0
+  batch_size: 128
+  accumulate_step: 1
+  eval_iteration: 100
+  patience: 30
+  bar: False
+  workers: 10
+  mp_norm: 'right'
+  seed: 123

@@ -1,0 +1,14 @@
+algorithm: 'GCN'
+task: 'node'
+algorithm: 'ReNode'
+n_layer: 2
+lr: 0.01
+hidden_dim: 64
+dropout: 0.5
+weight_decay: 0.0005
+epoch: 500
+least_epoch: 40
+
+pagerank_prob: 0.85
+rn_base_weight: 0.5
+rn_scale_weight: 1.0

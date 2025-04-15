@@ -1,0 +1,19 @@
+algorithm: 'DataDec'
+task: 'graph'
+backbone: 'GIN'
+n_layer: 2
+lr: 0.005
+hidden_dim: 256
+dropout: 0.5
+weight_decay: 0.0005
+epoch: 500
+batch_size: 128
+
+prune_percent: 0.25
+random_prune_percent: 0.25
+biggest_prune_percent: 0.75
+random_prune_percent: 0.25
+explore_rate: 0.1
+
+is_error_rank: False
+fine_tune_ratio: 0.3
