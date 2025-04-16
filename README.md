@@ -23,39 +23,44 @@ IGL-Bench serves as the **first** open-sourced benchmark for graph-specific imba
 - **Multi-faceted Evaluation and Analysis.** We conduct a systematic analysis of IGL methods from various dimensions, including effectiveness, efficiency, and complexity. Based on the results of extensive experiments, we uncover both the potential advantages and limitations of current IGL algorithms, providing valuable insights to guide future research endeavors.
 - **Open-sourced Package.** To facilitate future IGL research, we develop an open-sourced benchmark package for public access. Users can evaluate their algorithms or datasets with less effort.
 
-## ⚙️ Installation
+## 📦 Installation
 
-#### Requirements
+Follow the steps below to install and configure **IGL-Bench** properly for your local environment.
 
-Main package requirements:
+#### Environment Requirements
 
-- `CUDA >= 10.1`
-- `Python >= 3.8.12`
-- `PyTorch >= 1.9.1`
-- `PyTorch-Geometric >= 2.0.1`
+Please ensure your Python environment meets or exceeds the following dependencies:
 
-To install the comlete requiring packages, using following command at root directory of the repository:
 
-```setup
+| Dependency        | Version (≥) |
+| ----------------- | ------------ |
+| Python            | 3.8.12       |
+| PyTorch           | 1.9.1        |
+| PyTorch-Geometric | 2.0.1        |
+| DGL               | 1.1          |
+| scipy             | 1.9          |
+
+> **Recommendation:** Use a dedicated Python virtual environment (e.g., via `conda` or `venv`) to avoid dependency conflicts and ensure reproducibility.
+
+#### [Recommended] Installation Steps
+
+Clone the repository and install required dependencies:
+
+```bash
+# Clone the repository
+git clone https://github.com/RingBDStack/IGL-Bench.git
+cd IGL-Bench
+
+# Install dependencies
 pip install -r requirements.txt
 ```
+#### [Optional] Development Mode Installation
 
-#### Installation via PyPI
+If you want to install the package for your local development, use:
 
-To install IGL-Bench with `pip`, run *(under construction)*:
-
-```
-pip install IGL-Bench
-```
-
-#### Installation for local development
-
-```
-git clone https://github.com/RingBDStack/IGL-Bench
-cd IGL-Bench
+```bash
 pip install -e .
 ```
-
 ## 🚀 Quick Start
 
 <p align="center">
@@ -74,7 +79,6 @@ You can also refer to our runnable example notebook:
 ```python
 import IGL_Bench as igl
 ```
-
 #### Step 2: Initialize Dataset
 
 ```python
@@ -86,7 +90,6 @@ Dataset = igl.dataset.Dataset(
 )
 dataset = Dataset.load_dataset()
 ```
-
 #### Step 3: Load Configuration
 
 ```python
@@ -96,14 +99,12 @@ config = igl.config.load_conf(
     algorithm="PASTEL"
 )
 ```
-
 #### Step 4: Run Solver
 
 ```python
 solver = igl.manage.Manager(config, dataset)
 solver.run(num_runs=5)
 ```
-
 ### 🔸 Graph-Level Task (e.g., G2GNN on D&D)
 
 #### Step 1: Import Package
@@ -111,7 +112,6 @@ solver.run(num_runs=5)
 ```python
 import IGL_Bench as igl
 ```
-
 #### Step 2: Initialize Dataset
 
 ```python
@@ -123,7 +123,6 @@ Dataset = igl.dataset.Dataset(
 )
 dataset = Dataset.load_dataset()
 ```
-
 #### Step 3: Load Configuration
 
 ```python
@@ -133,14 +132,12 @@ config = igl.config.load_conf(
     algorithm="G2GNN"
 )
 ```
-
 #### Step 4: Run Solver
 
 ```python
 solver = igl.manage.Manager(config, dataset)
 solver.run(num_runs=10)
 ```
-
 ## ⚙️ Configuration Argument Options
 
 You can flexibly configure algorithms using the `Dataset(...)` and `load_conf(...)` API with the following parameters:
@@ -152,7 +149,6 @@ Specifies the type of task:
 ```
 'node' or 'graph'
 ```
-
 #### `data_name`
 
 Node-level datasets:
@@ -160,13 +156,11 @@ Node-level datasets:
 ```
 'Cora', 'CiteSeer', 'PubMed', 'Computers', 'Photo', 'ogbn-arxiv', 'Chameleon', 'Squirrel', 'Actor'
 ```
-
 Graph-level datasets:
 
 ```
 'PTC-MR', 'FRANKENSTEIN', 'PROTEINS', 'D&D', 'IMDB-B', 'REDDIT-B', 'COLLAB', 'ogbg-molhiv'
 ```
-
 #### `imbtype`
 
 Imbalance type (depends on task):
@@ -187,7 +181,6 @@ Controls the severity of imbalance:
 ```
 'low', 'mid', 'high'
 ```
-
 #### `algorithm`
 
 The algorithm to run. Supported algorithms include:
@@ -219,6 +212,23 @@ The algorithm to run. Supported algorithms include:
   ```
 
 You can also **manually modify the configuration files** located in [`config/`](./config) for fine-grained control over hyperparameters.
+
+## 🚧 Build Your Own IGL Algorithms
+
+IGL-Bench is designed with modularity and extensibility in mind.
+Due to the **unified solver interface**, users can seamlessly integrate their **custom algorithms** into our benchmarking pipeline with minimal boilerplate.
+
+We provide a step-by-step interactive notebook to guide you through the process:
+📓 [Build_Your_Own_IGL.ipynb](./Build_Your_Own_IGL.ipynb)
+
+This notebook covers:
+
+- ✅ Using the **pre-split datasets** (with `train_mask`, `val_mask`, `test_mask`)
+- ✅ Understanding the `Dataset` and `Config` structure
+- ✅ Running any existing algorithm with a single command
+- ✅ **Adding your own algorithm** in a few easy steps
+
+Your custom solver will automatically be discovered and benchmarked by the framework—just like any built-in baseline.
 
 ## 🧩 Algorithm References
 
