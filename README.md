@@ -4,7 +4,7 @@
 
 ---
 
-# Imbalanced Graph Learning Benchmark (IGL-Bench)
+# IGL-Bench: Establishing the Comprehensive Benchmark for Imbalanced Graph Learning (ICLR 2025 Spotlight🌟) [[PDF](https://arxiv.org/pdf/2406.09870)]
 
 IGL-Bench is a comprehensive benchmark for Imbalanced Graph Learning (IGL) based on [PyTorch](https://pytorch.org/) and [PyTorch Geometric](https://www.pyg.org/). We embark on **16** diverse graph datasets and **24** distinct IGL algorithms with uniform data processing and splitting strategies.
 
@@ -274,3 +274,14 @@ We have implemented the following IGL algorithms in the IGL-Bench:
 | DataDec          | ICML 2023          | Class-Imbalance                 | NC/GC | [When Sparsity Meets Contrastive Models: Less Graph Data Can Bring Better Class-Balanced Representations](https://proceedings.mlr.press/v202/zhang23o/zhang23o.pdf)                                                                       | [Link](https://www.dropbox.com/scl/fo/7jsv166zgve1vcbno15xo/AKEAQca4afpx5W8Z1ydoMRw?rlkey=umorleemawazju4p06ak2az4i&dl=0) |
 | ImGKB            | ACM MM 2023        | Class-Imbalance                 |  GC  | [Where to Find Fascinating Inter-Graph Supervision: Imbalanced Graph Classification with Kernel Information Bottleneck](https://dl.acm.org/doi/pdf/10.1145/3581783.3612039)                                                               | [Link](https://github.com/Tommtang/ImGKB)                                                                                 |
 | SOLT-GNN         | WWW 2022           | Class-Imbalance                 |  GC  | [On Size-Oriented Long-Tailed Graph Classification of Graph Neural Networks](https://zemin-liu.github.io/papers/SOLT-GNN-WWW-22.pdf)                                                                                                      | [Link](https://github.com/shuaiOKshuai/SOLT-GNN)                                                                          |
+## 📚 Citation
+If you find this repository helpful, please consider citing us. We welcome any discussions with [qinjw@buaa.edu.cn](mailto:qinjw@buaa.edu.cn).
+
+```bibtex
+@inproceedings{qin2025iglbench,
+  title={{IGL}-Bench: Establishing the Comprehensive Benchmark for Imbalanced Graph Learning},
+  author={Jiawen Qin and Haonan Yuan and Qingyun Sun and Lyujin Xu and Jiaqi Yuan and Pengfeng Huang and Zhaonan Wang and Xingcheng Fu and Hao Peng and Jianxin Li and Philip S. Yu},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025}
+}
+```
